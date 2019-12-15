@@ -33,6 +33,15 @@ class Dog
   end
   
   def self.find_by_name(name)
+    sql = <<-SQL
+      SELECT * FROM dogs
+      WHERE name = ?
+      LIMIT 1;
+    SQL
+    
+    dog = DB[:conn].execute(sql, name)[0]
+    self.new_from_db(dog)
+  end
   
   def save
     sql = <<-SQL
