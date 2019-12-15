@@ -32,6 +32,8 @@ class Dog
     self.new(id: array[0], name: array[1], breed: array[2])
   end
   
+  def self.find_by_name(name)
+  
   def save
     sql = <<-SQL
       INSERT INTO dogs (name, breed)
