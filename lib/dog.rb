@@ -43,6 +43,8 @@ class Dog
     self.new_from_db(dog)
   end
   
+  def self.create
+  
   def update
     sql = <<-SQL
       UPDATE dogs
