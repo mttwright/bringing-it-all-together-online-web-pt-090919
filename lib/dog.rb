@@ -43,6 +43,12 @@ class Dog
     self.new_from_db(dog)
   end
   
+  def update
+    sql = <<-SQL
+      UPDATE
+    SQL
+  end
+  
   def save
     sql = <<-SQL
       INSERT INTO dogs (name, breed)
