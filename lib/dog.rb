@@ -66,6 +66,8 @@ class Dog
       WHERE name = ?, breed = ?
       LIMIT 1;
     SQL
+    
+    
   end
   
   def update
