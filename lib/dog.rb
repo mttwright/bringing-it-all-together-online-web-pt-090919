@@ -70,8 +70,10 @@ class Dog
     dog = DB[:conn].execute(sql, name, breed)
     
     if dog.empty?
-    
-    
+      self.create(name: name, breed: breed)
+    else
+      dog.save
+    end
   end
   
   def update
