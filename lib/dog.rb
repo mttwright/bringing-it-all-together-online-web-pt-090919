@@ -67,7 +67,7 @@ class Dog
       LIMIT 1;
     SQL
     
-    
+    dog = DB[:conn].execute(sql, name, breed)
   end
   
   def update
