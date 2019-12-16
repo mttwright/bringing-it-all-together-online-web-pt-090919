@@ -63,7 +63,7 @@ class Dog
   def self.find_or_create_by(name:, breed:)
     sql = <<-SQL
       SELECT * FROM dogs
-      WHERE name = ?, breed = ?
+      WHERE name = ? AND breed = ?
       LIMIT 1;
     SQL
     
